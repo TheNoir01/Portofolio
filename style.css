@@ -174,7 +174,7 @@ html {
         padding-left: 30px !important;
     }
     .custom-timeline .timeline-dot {
-        left: 0 !important;
+        left: 10px !important;
     }
 }
 
@@ -221,3 +221,7 @@ html {
     transform: translateY(-5px);
     background-color: #099268 !important;
 }
+
+/* Custom text sizes for marketplace look */
+.fs-7 { font-size: 0.85rem !important; }
+.fs-8 { font-size: 0.75rem !important; }
