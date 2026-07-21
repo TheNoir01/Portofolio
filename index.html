@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haidar Ali Abidin - Portfolio</title>
+    <meta name="description" content="Portofolio Haidar Ali Abidin, Software Developer & 3D Designer.">
+    <meta property="og:title" content="Haidar Ali Abidin - Portfolio">
+    <meta property="og:description" content="Portofolio Haidar Ali Abidin, Software Developer & 3D Designer.">
+    <meta property="og:type" content="website">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-body text-body" data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary shadow-sm transition-all" id="navbar">
+        <div class="container py-2">
+            <a class="navbar-brand fw-bold" href="#">Haidar Ali Abidin.</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center gap-2 gap-lg-4 mt-3 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#hero">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#about">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#skills">Skill</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#projects">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="#contact">Kontak</a>
+                    </li>
+                    <li class="nav-item d-flex align-items-center">
+                        <button id="theme-toggle" class="btn btn-link text-body p-0 ms-lg-2" aria-label="Toggle Dark Mode">
+                            <svg class="sun-icon d-none" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="d-flex align-items-center min-vh-100 pt-5">
+        <div class="container py-5">
+            <div class="row align-items-center flex-column-reverse flex-lg-row text-center text-lg-start g-5">
+                <div class="col-lg-6 fade-up">
+                    <p class="text-primary fw-semibold fs-5 mb-2">Halo, saya</p>
+                    <h1 class="display-4 fw-bold mb-3 gradient-text">Haidar Ali Abidin</h1>
+                    <h2 class="h3 text-secondary mb-4">Software Developer & 3D Designer</h2>
+                    <p class="text-secondary mb-4 mx-auto mx-lg-0" style="max-width: 500px; font-size: 1.1rem;">
+                        Mahasiswa Teknik Informatika Semester 4 yang antusias dengan pengembangan web, aplikasi mobile, dan desain 3D. Selalu bersemangat untuk belajar teknologi baru dan menciptakan solusi digital yang bermanfaat.
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                        <a href="assets/documents/cv/curriculum_vitae.pdf" class="btn btn-primary rounded-pill px-4 py-2 fw-medium" download>Download CV</a>
+                        <a href="#projects" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-medium border-2">Lihat Project</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 fade-left d-flex justify-content-center">
+                    <div class="rounded-circle p-2" style="width: 350px; height: 350px; background: linear-gradient(45deg, var(--bs-primary), transparent);">
+                        <img src="assets/images/profile/photo.jpeg" alt="Foto Profil Haidar Ali Abidin" loading="lazy" class="w-100 h-100 object-fit-cover rounded-circle bg-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="bg-body-tertiary py-5">
+        <div class="container py-5">
+            <div class="text-center fade-up mb-5">
+                <h2 class="fw-bold mb-3">Tentang Saya</h2>
+                <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+            </div>
+            <div class="fade-up text-center text-secondary mx-auto" style="max-width: 800px; font-size: 1.1rem;">
+                <p>Mahasiswa Teknik Informatika Semester 4 yang antusias dengan pengembangan web, aplikasi mobile, dan desain 3D. Selalu bersemangat untuk belajar teknologi baru dan menciptakan solusi digital yang bermanfaat.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container py-5">
+            <div class="text-center fade-up mb-5">
+                <h2 class="fw-bold mb-3">Keahlian</h2>
+                <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card h-100 border text-center shadow-sm hover-translate-y transition-all fade-up">
+                        <div class="card-body p-4">
+                            <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+                                <img src="assets/images/icon/html.png" alt="HTML5" loading="lazy" class="mh-100 w-auto"
+                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%23ccc\'/><text x=\'25\' y=\'25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23333\'>Icon</text></svg>'">
+                            </div>
+                            <h3 class="h6 fw-bold mb-0">HTML5</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card h-100 border text-center shadow-sm hover-translate-y transition-all fade-up">
+                        <div class="card-body p-4">
+                            <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+                                <img src="assets/images/icon/css.png" alt="CSS3" loading="lazy" class="mh-100 w-auto"
+                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%23ccc\'/><text x=\'25\' y=\'25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23333\'>Icon</text></svg>'">
+                            </div>
+                            <h3 class="h6 fw-bold mb-0">CSS3</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card h-100 border text-center shadow-sm hover-translate-y transition-all fade-up">
+                        <div class="card-body p-4">
+                            <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+                                <img src="assets/images/icon/js.png" alt="JavaScript" loading="lazy" class="mh-100 w-auto"
+                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%23ccc\'/><text x=\'25\' y=\'25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23333\'>Icon</text></svg>'">
+                            </div>
+                            <h3 class="h6 fw-bold mb-0">JavaScript</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card h-100 border text-center shadow-sm hover-translate-y transition-all fade-up">
+                        <div class="card-body p-4">
+                            <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+                                <img src="assets/images/icon/php.png" alt="PHP Native" loading="lazy" class="mh-100 w-auto"
+                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%23ccc\'/><text x=\'25\' y=\'25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23333\'>Icon</text></svg>'">
+                            </div>
+                            <h3 class="h6 fw-bold mb-0">PHP</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card h-100 border text-center shadow-sm hover-translate-y transition-all fade-up">
+                        <div class="card-body p-4">
+                            <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+                                <img src="assets/images/icon/Laravel.svg" alt="Laravel" loading="lazy" class="mh-100 w-auto"
+                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%23ccc\'/><text x=\'25\' y=\'25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23333\'>Icon</text></svg>'">
+                            </div>
+                            <h3 class="h6 fw-bold mb-0">Laravel</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="card h-100 border text-center shadow-sm hover-translate-y transition-all fade-up">
+                        <div class="card-body p-4">
+                            <div class="mb-3 d-flex justify-content-center align-items-center" style="height: 60px;">
+                                <img src="assets/images/icon/blender.png" alt="Blender 3D" loading="lazy" class="mh-100 w-auto"
+                                    onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'50\' height=\'50\'><rect width=\'50\' height=\'50\' fill=\'%23ccc\'/><text x=\'25\' y=\'25\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23333\'>Icon</text></svg>'">
+                            </div>
+                            <h3 class="h6 fw-bold mb-0">Blender</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="bg-body-tertiary py-5">
+        <div class="container py-5">
+            <div class="text-center fade-up mb-5">
+                <h2 class="fw-bold mb-3">Pendidikan</h2>
+                <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+            </div>
+            
+            <div class="timeline custom-timeline">
+                <div class="timeline-item fade-up position-relative mb-4 ps-5">
+                    <div class="timeline-dot position-absolute top-0 start-0 translate-middle-x rounded-circle border border-4 border-body bg-primary" style="width: 20px; height: 20px; left: 10px;"></div>
+                    <div class="card border shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-3">2024 - Sekarang</span>
+                            <h3 class="h5 fw-bold mb-2">Mahasiswa Teknik Informatika</h3>
+                            <h4 class="h6 text-secondary mb-3">Universitas Buana Perjuangan Karawang</h4>
+                            <p class="mb-0 text-secondary">Aktif dalam berbagai proyek pengembangan perangkat lunak, algoritma, dan desain 3D.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up position-relative mb-4 ps-5">
+                    <div class="timeline-dot position-absolute top-0 start-0 translate-middle-x rounded-circle border border-4 border-body bg-primary" style="width: 20px; height: 20px; left: 10px;"></div>
+                    <div class="card border shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-3">2021 - 2024</span>
+                            <h3 class="h5 fw-bold mb-2">Teknik Komputer & Jaringan</h3>
+                            <h4 class="h6 text-secondary mb-3">SMK TRI MITRA</h4>
+                            <p class="mb-0 text-secondary">Mempelajari dasar-dasar ilmu komputer, perakitan perangkat keras, instalasi dan administrasi jaringan, serta pemecahan masalah sistem IT.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container py-5">
+            <div class="text-center fade-up mb-5">
+                <h2 class="fw-bold mb-3">Pengalaman</h2>
+                <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+            </div>
+            
+            <div class="timeline custom-timeline">
+                <div class="timeline-item fade-up position-relative mb-4 ps-5">
+                    <div class="timeline-dot position-absolute top-0 start-0 translate-middle-x rounded-circle border border-4 border-body bg-primary" style="width: 20px; height: 20px; left: 10px;"></div>
+                    <div class="card border shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-3">Maret 2024 - Februari 2025</span>
+                            <h3 class="h5 fw-bold mb-2">Internship IT Support & 3D Design</h3>
+                            <h4 class="h6 text-secondary mb-3">PT. KALBE MORINAGA INDONESIA</h4>
+                            <p class="mb-0 text-secondary">Melakukan troubleshoot pada jaringan, hardware, dan software. Serta membuat visualisasi 3D untuk kebutuhan internal perusahaan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-up position-relative mb-4 ps-5">
+                    <div class="timeline-dot position-absolute top-0 start-0 translate-middle-x rounded-circle border border-4 border-body bg-primary" style="width: 20px; height: 20px; left: 10px;"></div>
+                    <div class="card border shadow-sm">
+                        <div class="card-body p-4">
+                            <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-3">April 2023 - Juni 2023</span>
+                            <h3 class="h5 fw-bold mb-2">PKL IT Support</h3>
+                            <h4 class="h6 text-secondary mb-3">AXIOO CARE PLATINUM – SEMARANG</h4>
+                            <p class="mb-0 text-secondary">Melakukan perbaikan hardware dan software pada komputer dan laptop, menginstal sistem operasi dan aplikasi, serta memberikan konsultasi dan solusi IT untuk meningkatkan kinerja sistem pelanggan.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-body-tertiary py-5">
+        <div class="container py-5">
+            <div class="text-center fade-up mb-5">
+                <h2 class="fw-bold mb-3">Project Saya</h2>
+                <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+            </div>
+
+            <div class="d-flex justify-content-center flex-wrap gap-2 mb-5 fade-up" id="project-filters">
+                <button class="btn btn-outline-primary rounded-pill px-4 active filter-btn" data-filter="all">Semua</button>
+                <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="website">Website</button>
+                <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="mobile">Mobile App</button>
+                <button class="btn btn-outline-primary rounded-pill px-4 filter-btn" data-filter="design3d">3D Design</button>
+            </div>
+
+            <div class="row g-4" id="project-container">
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="website">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/website/Zeven.png" alt="Zeven Marketplace" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Thumbnail Project</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2026</span>
+                            <h3 class="h5 fw-bold mb-2">Zeven Marketplace</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Website marketplace untuk seller dan admin mengelola barang dan penjualan.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">PHP</span>
+                                <span class="badge border text-secondary fw-normal">HTML</span>
+                                <span class="badge border text-secondary fw-normal">CSS</span>
+                                <span class="badge border text-secondary fw-normal">JS</span>
+                                <span class="badge border text-secondary fw-normal">MYSQL</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://zeven.kelompok27.com/" target="_blank" class="btn btn-sm btn-primary px-3 rounded-pill">Kunjungi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="mobile">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/mobile/Preview_ArusKas.png" alt="Arus" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Thumbnail Project</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2026</span>
+                            <h3 class="h5 fw-bold mb-2">ArusKas</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Aplikasi mobile untuk mencatat dan mengelola keuangan.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">Ionic Framework</span>
+                                <span class="badge border text-secondary fw-normal">Typescript</span>
+                                <span class="badge border text-secondary fw-normal">Android</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://play.google.com/store/apps/details?id=com.aruskas.myapp" target="_blank" class="btn btn-sm btn-primary px-3 rounded-pill">Unduh App</a>
+                                <a href="https://github.com/TheNoir01/ArusKas" target="_blank" class="btn btn-sm btn-outline-secondary px-3 rounded-pill">GitHub</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="mobile">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/mobile/Preview_Zeven.png" alt="zeven" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Thumbnail Project</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2026</span>
+                            <h3 class="h5 fw-bold mb-2">Zeven </h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Aplikasi mobile marketplace untuk user membeli barang.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">Ionic Framework</span>
+                                <span class="badge border text-secondary fw-normal">Typescript</span>
+                                <span class="badge border text-secondary fw-normal">Android</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://play.google.com/store/apps/details?id=com.aruskas.myapp" target="_blank" class="btn btn-sm btn-primary px-3 rounded-pill">Unduh App</a>
+                                <a href="https://github.com/TheNoir01/ArusKas" target="_blank" class="btn btn-sm btn-outline-secondary px-3 rounded-pill">GitHub</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="website">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/website/blog-basis-data.png" alt="Blog Basis Data" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' fill=\'%23555\'>Blog Basis Data</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2025</span>
+                            <h3 class="h5 fw-bold mb-2">Blog Basis Data</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Website blog pribadi yang berisi kumpulan artikel dan tugas seputar pembelajaran Basis Data dan ERD.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">HTML</span>
+                                <span class="badge border text-secondary fw-normal">CSS</span>
+                                <span class="badge border text-secondary fw-normal">Bootstrap</span>
+                            </div>
+                            <div class="d-flex gap-2 mt-auto">
+                                <a href="https://24416255201051.netlify.app/" target="_blank" class="btn btn-sm btn-primary px-3 rounded-pill">Kunjungi</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="design3d">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/design3d/LivingRoom.png" alt="Living Room" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Thumbnail Project</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2025</span>
+                            <h3 class="h5 fw-bold mb-2">Living Room</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Pemodelan 3D interior modern.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">Blender</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="design3d">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/design3d/DOJO.png" alt="Anime Charaacter Model" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Thumbnail Project</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2025</span>
+                            <h3 class="h5 fw-bold mb-2">Cozy side room</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Pemodelan interior ruangan.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">Blender</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="design3d">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/design3d/RMB.png" alt="Anime Charaacter Model" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Thumbnail Project</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2025</span>
+                            <h3 class="h5 fw-bold mb-2">Meeting Room</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Pemodelan interior ruangan.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">Blender</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="design3d">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/design3d/SamsungS24.jpg" alt="Samsung S24" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' fill=\'%23555\'>Samsung S24</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2025</span>
+                            <h3 class="h5 fw-bold mb-2">Samsung S24</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Pemodelan 3D produk smartphone Samsung S24.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">Blender</span>
+                                <span class="badge border text-secondary fw-normal">Hard Surface</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-md-6 col-lg-4 project-item fade-up" data-category="design3d">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/design3d/MesinFilling.png" alt="Mesin Filling" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' fill=\'%23555\'>Mesin Filling</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2024</span>
+                            <h3 class="h5 fw-bold mb-2">Mesin Filling</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Pemodelan 3D mesin industri untuk kebutuhan internal PT Kalbe Morinaga Indonesia.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">Blender</span>
+                                <span class="badge border text-secondary fw-normal">Hard Surface</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 project-item fade-up" data-category="design3d">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all group">
+                        <div class="bg-secondary-subtle overflow-hidden" style="height: 200px;">
+                            <img src="assets/images/design3d/MesinTipping.png" alt="Mesin Tipping" loading="lazy" class="w-100 h-100 object-fit-cover transition-transform hover-scale"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'><rect width=\'400\' height=\'300\' fill=\'%23ddd\'/><text x=\'200\' y=\'150\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'sans-serif\' fill=\'%23555\'>Mesin Tipping</text></svg>'">
+                        </div>
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="text-primary fw-bold small mb-2">2024</span>
+                            <h3 class="h5 fw-bold mb-2">Mesin Tipping</h3>
+                            <p class="text-secondary mb-4 flex-grow-1">Pemodelan 3D mesin industri untuk kebutuhan internal PT Kalbe Morinaga Indonesia.</p>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge border text-secondary fw-normal">Blender</span>
+                                <span class="badge border text-secondary fw-normal">Hard Surface</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="bg-body-tertiary py-5">
+        <div class="container py-5">
+            <div class="text-center fade-up mb-5">
+                <h2 class="fw-bold mb-3">Sertifikat</h2>
+                <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all fade-up">
+                        <div class="bg-secondary-subtle" style="height: 220px;">
+                            <img src="assets/images/certificate/HAIDAR ALI ABIDIN - Intro to SQL.png" alt="Intro To SQL" loading="lazy" class="w-100 h-100 object-fit-cover"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'280\'><rect width=\'400\' height=\'280\' fill=\'%23ddd\'/><text x=\'200\' y=\'140\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Sertifikat</text></svg>'">
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="h5 fw-bold mb-1">Intro To SQL</h3>
+                            <p class="text-secondary mb-3">Kaggle - 2026</p>
+                            <a href="assets/documents/certificate/HAIDAR ALI ABIDIN - Intro to SQL.pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3">Lihat Sertifikat</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all fade-up">
+                        <div class="bg-secondary-subtle" style="height: 220px;">
+                            <img src="assets/images/certificate/KMI.jpg" alt="Internship" loading="lazy" class="w-100 h-100 object-fit-cover"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'280\'><rect width=\'400\' height=\'280\' fill=\'%23ddd\'/><text x=\'200\' y=\'140\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Sertifikat</text></svg>'">
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="h5 fw-bold mb-1">Internship PT KALBE MORINAGA INDONESIA</h3>
+                            <p class="text-secondary mb-3">PT Kalbe Morinaga Indonesia Maret 2024 - Februari 2025</p>
+                            <a href="assets/documents/certificate/KMI.pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3">Lihat Sertifikat</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all fade-up">
+                        <div class="bg-secondary-subtle" style="height: 220px;">
+                            <img src="assets/images/certificate/CyberTask.png" alt="CyberTask" loading="lazy" class="w-100 h-100 object-fit-cover"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'280\'><rect width=\'400\' height=\'280\' fill=\'%23ddd\'/><text x=\'200\' y=\'140\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Sertifikat</text></svg>'">
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="h5 fw-bold mb-1">CyberTask</h3>
+                            <p class="text-secondary mb-3">Sertifikat CyberTask</p>
+                            <a href="assets/documents/certificate/CyberTask.pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3">Lihat Sertifikat</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all fade-up">
+                        <div class="bg-secondary-subtle" style="height: 220px;">
+                            <img src="assets/images/certificate/KAWAI.png" alt="KAWAI" loading="lazy" class="w-100 h-100 object-fit-cover"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'280\'><rect width=\'400\' height=\'280\' fill=\'%23ddd\'/><text x=\'200\' y=\'140\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Sertifikat</text></svg>'">
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="h5 fw-bold mb-1">Sertifikat KAWAI</h3>
+                            <p class="text-secondary mb-3">Sertifikat Partisipasi KAWAI</p>
+                            <a href="assets/documents/certificate/KAWAI.pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3">Lihat Sertifikat</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border shadow-sm overflow-hidden hover-translate-y transition-all fade-up">
+                        <div class="bg-secondary-subtle" style="height: 220px;">
+                            <img src="assets/images/certificate/TENSAI N5A.png" alt="TENSAI N5A" loading="lazy" class="w-100 h-100 object-fit-cover"
+                                onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'280\'><rect width=\'400\' height=\'280\' fill=\'%23ddd\'/><text x=\'200\' y=\'140\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23555\'>Sertifikat</text></svg>'">
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="h5 fw-bold mb-1">TENSAI N5A</h3>
+                            <p class="text-secondary mb-3">Sertifikat TENSAI N5A</p>
+                            <a href="assets/documents/certificate/TENSAI N5A.pdf" target="_blank" class="btn btn-sm btn-primary rounded-pill px-3">Lihat Sertifikat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <div class="text-center fade-up mb-5">
+                <h2 class="fw-bold mb-3">Hubungi Saya</h2>
+                <div class="bg-primary mx-auto rounded" style="width: 60px; height: 4px;"></div>
+            </div>
+            
+            <div class="fade-up mx-auto bg-body p-4 p-md-5 rounded shadow border" style="max-width: 600px;">
+                <div class="d-flex flex-column gap-3">
+                    <a href="mailto:aliabidinhaidar@gmail.com" class="d-flex align-items-center gap-3 p-3 rounded text-decoration-none text-body contact-item hover-bg-light transition-all">
+                        <svg class="text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span class="fw-medium fs-5">aliabidinhaidar@gmail.com</span>
+                    </a>
+                    
+                    <a href="https://wa.me/6285718537229" target="_blank" class="d-flex align-items-center gap-3 p-3 rounded text-decoration-none text-body contact-item hover-bg-light transition-all">
+                        <svg class="text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <span class="fw-medium fs-5">WhatsApp</span>
+                    </a>
+                    
+                    <a href="https://github.com/TheNoir01" target="_blank" class="d-flex align-items-center gap-3 p-3 rounded text-decoration-none text-body contact-item hover-bg-light transition-all">
+                        <svg class="text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        <span class="fw-medium fs-5">GitHub</span>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/haidaraliabidin" target="_blank" class="d-flex align-items-center gap-3 p-3 rounded text-decoration-none text-body contact-item hover-bg-light transition-all">
+                        <svg class="text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                        <span class="fw-medium fs-5">LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/haidarali.01/" target="_blank" class="d-flex align-items-center gap-3 p-3 rounded text-decoration-none text-body contact-item hover-bg-light transition-all">
+                        <svg class="text-primary" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <span class="fw-medium fs-5">Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 border-top bg-body">
+        <div class="container">
+            <p class="text-secondary mb-0">&copy; 2026 Haidar Ali Abidin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary rounded-circle shadow position-fixed z-3 d-flex align-items-center justify-content-center opacity-0 invisible transition-all" style="width: 45px; height: 45px; bottom: 30px; right: 30px;" aria-label="Kembali ke atas">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

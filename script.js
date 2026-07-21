@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     /* ==========================================
-       DARK MODE TOGGLE
+       DARK MODE TOGGLE (BOOTSTRAP 5.3)
     ========================================== */
     const themeToggleBtn = document.getElementById('theme-toggle');
     const htmlElement = document.documentElement;
@@ -9,56 +9,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cek Local Storage
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
-        htmlElement.setAttribute('data-theme', savedTheme);
+        htmlElement.setAttribute('data-bs-theme', savedTheme);
     } else {
         // Cek OS preference jika belum ada di local storage
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            htmlElement.setAttribute('data-theme', 'dark');
+            htmlElement.setAttribute('data-bs-theme', 'dark');
         }
     }
 
-    themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
-
-    /* ==========================================
-       MOBILE MENU HAMBURGER
-    ========================================== */
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const navItems = document.querySelectorAll('.nav-links a');
-
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-bs-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
         });
     }
-
-    // Tutup menu saat link diklik (di mobile)
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-        });
-    });
 
     /* ==========================================
        STICKY NAVBAR & ACTIVE LINK
     ========================================== */
     const navbar = document.getElementById('navbar');
     const sections = document.querySelectorAll('section, header');
+    const navItems = document.querySelectorAll('.nav-links a, .navbar-nav .nav-link');
+    const navbarCollapse = document.getElementById('navbarNav');
     
     window.addEventListener('scroll', () => {
         // Sticky Navbar
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
+            navbar.classList.add('shadow');
+            navbar.classList.remove('shadow-sm');
         } else {
             navbar.classList.remove('scrolled');
+            navbar.classList.add('shadow-sm');
+            navbar.classList.remove('shadow');
         }
 
         // Active Nav Link on Scroll
@@ -75,6 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
             a.classList.remove('active');
             if (a.getAttribute('href') === `#${current}`) {
                 a.classList.add('active');
+            }
+        });
+    });
+
+    // Close mobile menu on link click
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
             }
         });
     });
@@ -96,17 +92,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             projectItems.forEach(item => {
                 const category = item.getAttribute('data-category');
+                
                 if (filterValue === 'all' || filterValue === category) {
-                    item.style.display = 'flex';
-                    // Trigger reflow untuk animasi (opsional jika ingin fade saat filter)
+                    item.classList.remove('d-none');
+                    // Tambahkan delay kecil untuk trigger animasi masuk
                     setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
+                        item.style.opacity = '';
+                        item.style.transform = '';
+                        item.classList.add('visible');
                     }, 50);
                 } else {
-                    item.style.display = 'none';
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
+                    item.classList.add('d-none');
+                    item.classList.remove('visible');
+                    item.style.opacity = '';
+                    item.style.transform = '';
                 }
             });
         });
@@ -140,52 +139,43 @@ document.addEventListener('DOMContentLoaded', () => {
     ========================================== */
     const backToTopBtn = document.getElementById('back-to-top');
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 500) {
-            backToTopBtn.classList.add('show');
-        } else {
-            backToTopBtn.classList.remove('show');
-        }
-    });
-
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
         });
-    });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    /* ==========================================
+       BOOTSTRAP MODAL GALLERY LOGIC
+    ========================================== */
+    const galleryModal = document.getElementById('galleryModal');
+    if (galleryModal) {
+        galleryModal.addEventListener('show.bs.modal', event => {
+            // Element yang mentrigger modal
+            const triggerElement = event.relatedTarget;
+            
+            // Ekstrak info dari atribut data-bs-*
+            const imgSrc = triggerElement.getAttribute('data-bs-img');
+            const imgTitle = triggerElement.getAttribute('data-bs-title');
+            
+            // Update konten modal
+            const modalImage = galleryModal.querySelector('#modalImg');
+            const modalCaption = galleryModal.querySelector('#modalCaption');
+            
+            modalImage.src = imgSrc;
+            modalCaption.textContent = imgTitle;
+        });
+    }
 
 });
-
-/* ==========================================
-   MODAL 3D GALLERY (Global Scope)
-========================================== */
-const modal = document.getElementById("image-modal");
-const modalImg = document.getElementById("modal-img");
-const captionText = document.getElementById("modal-caption");
-const span = document.getElementsByClassName("close-modal")[0];
-
-// Fungsi dipanggil via onclick di HTML
-window.openModal = function(imageSrc, caption) {
-    modal.style.display = "block";
-    modalImg.src = imageSrc;
-    captionText.innerHTML = caption;
-    
-    // Prevent scrolling behind modal
-    document.body.style.overflow = "hidden";
-}
-
-if (span) {
-    span.onclick = function() { 
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-}
-
-// Menutup modal jika klik di luar gambar
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-}
